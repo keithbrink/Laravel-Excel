@@ -58,7 +58,7 @@ class QueuedWriter
      * @param  string  $disk
      * @param  string|null  $writerType
      * @param  array|string  $diskOptions
-     * @return PendingDispatch|PendingBatch
+     * @return PendingDispatch|Illuminate\Bus\PendingBatch
      */
     public function store($export, string $filePath, string $disk = null, string $writerType = null, $diskOptions = [])
     {

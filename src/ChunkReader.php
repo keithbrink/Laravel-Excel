@@ -2,7 +2,6 @@
 
 namespace Maatwebsite\Excel;
 
-use Illuminate\Bus\PendingBatch;
 use Illuminate\Bus\Queueable;
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -40,7 +39,7 @@ class ChunkReader
      * @param  WithChunkReading  $import
      * @param  Reader  $reader
      * @param  TemporaryFile  $temporaryFile
-     * @return PendingDispatch|PendingBatch|Collection|null
+     * @return PendingDispatch|\Illuminate\Bus\PendingBatch|Collection|null
      */
     public function read(WithChunkReading $import, Reader $reader, TemporaryFile $temporaryFile)
     {
