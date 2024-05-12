@@ -2,14 +2,14 @@
 
 namespace Maatwebsite\Excel;
 
-use Maatwebsite\Excel\Concerns\ShouldBatch;
 use Illuminate\Foundation\Bus\PendingDispatch;
-use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Bus;
 use Illuminate\Support\LazyCollection;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\FromQuery;
 use Maatwebsite\Excel\Concerns\FromView;
+use Maatwebsite\Excel\Concerns\ShouldBatch;
 use Maatwebsite\Excel\Concerns\WithCustomChunkSize;
 use Maatwebsite\Excel\Concerns\WithCustomQuerySize;
 use Maatwebsite\Excel\Concerns\WithMultipleSheets;
