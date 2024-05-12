@@ -9,7 +9,9 @@ if (trait_exists('\Illuminate\Bus\Batchable')) {
 
         public function batchCancelled()
         {
-            return $this->batch()?->cancelled();
+            $batch = $this->batch();
+
+            return $batch !== null && method_exists($batch, 'cancelled') && $batch->cancelled();
         }
     }
 } else {
