@@ -75,10 +75,8 @@ class AppendDataToSheet implements ShouldQueue
     public function handle(Writer $writer)
     {
         // Determine if the batch has been cancelled...
-        if (method_exists($this, 'batchCancelled')) {
-            if ($this->batchCancelled()) {
-                return;
-            }
+        if ($this->batchCancelled()) {
+            return;
         }
 
         (new LocalizeJob($this->sheetExport))->handle($this, function () use ($writer) {

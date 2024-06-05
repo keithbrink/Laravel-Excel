@@ -54,10 +54,8 @@ class StoreQueuedExport implements ShouldQueue
     public function handle(Filesystem $filesystem)
     {
         // Determine if the batch has been cancelled...
-        if (method_exists($this, 'batchCancelled')) {
-            if ($this->batchCancelled()) {
-                return;
-            }
+        if ($this->batchCancelled()) {
+            return;
         }
 
         $filesystem->disk($this->disk, $this->diskOptions)->copy(

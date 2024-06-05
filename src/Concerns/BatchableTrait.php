@@ -17,5 +17,9 @@ if (trait_exists('\Illuminate\Bus\Batchable')) {
 } else {
     trait BatchableTrait
     {
+        public function batchCancelled()
+        {
+            return false;
+        }
     }
 }

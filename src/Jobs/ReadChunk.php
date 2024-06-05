@@ -167,10 +167,8 @@ class ReadChunk implements ShouldQueue
     public function handle(TransactionHandler $transaction)
     {
         // Determine if the batch has been cancelled...
-        if (method_exists($this, 'batchCancelled')) {
-            if ($this->batchCancelled()) {
-                return;
-            }
+        if ($this->batchCancelled()) {
+            return;
         }
 
         if (method_exists($this->import, 'setChunkOffset')) {
