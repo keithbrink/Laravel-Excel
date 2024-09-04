@@ -16,8 +16,8 @@ use Maatwebsite\Excel\Tests\Data\Stubs\QueuedExport;
 use Maatwebsite\Excel\Tests\Data\Stubs\QueuedExportWithFailedEvents;
 use Maatwebsite\Excel\Tests\Data\Stubs\QueuedExportWithFailedHook;
 use Maatwebsite\Excel\Tests\Data\Stubs\QueuedExportWithLocalePreferences;
-use Maatwebsite\Excel\Tests\Data\Stubs\ShouldQueueExport;
 use Maatwebsite\Excel\Tests\Data\Stubs\ShouldBatchExport;
+use Maatwebsite\Excel\Tests\Data\Stubs\ShouldQueueExport;
 use Throwable;
 
 class QueuedExportTest extends TestCase
